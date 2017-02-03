@@ -1,0 +1,15 @@
+{
+  "name": "warmups",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jan5.js",
+  "scripts": {
+    "test": "mocha jan9-test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "*",
+    "mocha": "*"
+  }
+}
