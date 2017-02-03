@@ -22,3 +22,21 @@ console.log( checkTheArrayForItem([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 8) );
 // Write a function that is O(n^2) quick sort, bubble sort, insertion sort, selection sort. Quadratic (exponential) time. Ex. two loops nested. Outerloop runs n number of times (number of items in an array for ex), inner loop runs n times for each iteration of the loop. If array has 10 items, print 100 times, 1,000 items, print 1,000,000 times.
 
 // n can be the actual input (like an integer) or the size of the input (the number of items in an array, object etc..)
+
+
+function bSort(array){
+   var length = array.length;
+   for (var i = length - 1; i >= 0; i--){
+     for(var j = 1; j <= i; j++){
+       if(array[j-1] > array[j]){
+           var temp = array[j-1];
+           array[j-1] = array[j];
+           array[j] = temp;
+        }
+     }
+   }
+   return array;
+}
+bSort([7,5,2,4,3,9]); //[2, 3, 4, 5, 7, 9]
+bSort([9,7,5,4,3,1]); //[1, 3, 4, 5, 7, 9]
+bSort([1,2,3,4,5,6]); //[1, 2, 3, 4, 5, 6]
